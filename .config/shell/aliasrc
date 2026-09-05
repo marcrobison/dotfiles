@@ -4,3 +4,4 @@ alias shut="shutdown -h now"
 alias z="zathura"
 alias fucking="sudo"
 alias matlab='LD_PRELOAD=/usr/lib/libstdc++.so.6 matlab'
+alias pacman='sudo nice -n 19 ionice -c 3 pacman'
