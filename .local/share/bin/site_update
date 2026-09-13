@@ -5,6 +5,7 @@ ssh-add ~/.ssh/id_ed25519
 
 rsync -rLz --delete --info=progress2\
   --exclude='.git/' \
+  --exclude='.git/' \
   --exclude='.gitignore/' \
   --exclude='glucose/.gitignore/' \
   --exclude='glucose/__pycache__/' \
@@ -12,6 +13,8 @@ rsync -rLz --delete --info=progress2\
   --exclude='glucose/start_app.sh' \
   --exclude='glucose/venv/' \
   --exclude='template.html' \
+  --exclude='highscores.csv' \
+  --exclude='server' \
   ~/projects/website/ root@marcrobison.com:/var/www/my_site/
 if [ $? == 0 ]
 then
