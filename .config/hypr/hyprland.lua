@@ -345,6 +345,8 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
+hl.bind(mainMod .. " + CONTROL + W", hl.dsp.exec_cmd("notify-send $(python .local/share/bin/washing_machines.py)"))
+
 hl.bind(
 	mainMod .. " + I",
 	hl.dsp.exec_cmd([[kitty bash -c "pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo pacman -S"]])
@@ -361,7 +363,12 @@ hl.bind(
 hl.bind(mainMod .. " + CONTROL + A", hl.dsp.exec_cmd("hass-cli service call light.toggle --arguments entity_id=all"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(terminal .. " bluetui"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(terminal .. " neomutt"))
-hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("mpv av://v4l2:/dev/video0 --profile=low-latency --untimed"))
+hl.bind(
+	mainMod .. " + SHIFT + C",
+	hl.dsp.exec_cmd(
+		"mpv av://v4l2:/dev/video0 --demuxer-lavf-o=video_size=1280x960,input_format=mjpeg,framerate=30 --profile=low-latency --untimed"
+	)
+)
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("if pgrep -x waybar > /dev/null; then pkill waybar; fi; waybar &"))
 hl.bind("CONTROL + ALT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("record"))
