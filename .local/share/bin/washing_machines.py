@@ -9,7 +9,7 @@ options = Options()
 options.add_argument("--headless")
 driver = webdriver.Firefox(options=options)
 driver.get(env.washing_machine_url)
-time.sleep(5)
+#time.sleep(1)
 table = driver.find_element(By.TAG_NAME, "tbody")
 
 elements = table.text.splitlines()
