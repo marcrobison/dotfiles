@@ -42,6 +42,23 @@ tooltip {
 .server-ping-not-ok{
     color: #ff0000;
 }
+
+.high{
+    color: #ff0000;
+}
+
+.pretty_high{
+	.color: #FFA500
+}
+
+.normal{
+    color: #73fc03;
+}
+
+.low{
+    color: #ff0000;
+}
+
 #workspaces button {
     all:unset;
     padding: 0px 4px;
