@@ -25,6 +25,14 @@
 		"return-type": "json",
 		"format": " :{text}"
 	},
+
+	"custom/glucose": {
+		"interval": 60,
+		"tooltip": false,
+		"exec": "/home/marcman/.local/share/bin/get_glucose_val.sh",
+		"return-type": "json",
+		"format": "🩸{text}"
+	},
 	"memory": {
 		"tooltip": false,
 		"interval": 5,
