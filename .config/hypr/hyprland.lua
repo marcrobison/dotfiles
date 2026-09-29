@@ -432,7 +432,7 @@ local cam_h = 480 * 0.5
 hl.window_rule({
 	name = "webcam behavior",
 	match = {
-		title = "video0 - mpv",
+		title = "^video[0-9]+ - mpv$",
 	},
 	float = true,
 	pin = true,
