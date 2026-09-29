@@ -45,11 +45,12 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("[workspace 8 silent]" .. terminal .. " neomutt")
 	hl.exec_cmd("[workspace 9 silent]" .. terminal .. " taskwarrior-tui")
 	hl.exec_cmd("[workspace 2 silent]" .. browser)
-	hl.exec_cmd("[workspace 10 silent]" .. "whatsie")
+	hl.exec_cmd("[workspace 10 silent]" .. "elecwhat")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("waybar & hyprpaper")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	hl.exec_cmd("hyprlauncher -d")
+
 	--hl.exec_cmd("transmission-daemon")
 end)
 
@@ -433,7 +434,7 @@ local cam_h = 480 * 0.5
 hl.window_rule({
 	name = "webcam behavior",
 	match = {
-		title = "video0 - mpv",
+		title = "^video[0-9]+ - mpv$",
 	},
 	float = true,
 	pin = true,
