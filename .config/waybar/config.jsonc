@@ -18,6 +18,7 @@
 		"network",
 		"image",
 		"pulseaudio",
+		"battery",
 		"clock"
 	],
 	"custom/server": {
