@@ -3,3 +3,4 @@ alias grep='grep --color=auto'
 alias shut="shutdown -h now"
 alias z="zathura"
 alias fucking="sudo"
+alias matlab='LD_PRELOAD=/usr/lib/libstdc++.so.6 matlab'
