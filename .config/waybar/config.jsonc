@@ -4,6 +4,7 @@
 	"height": 50,
 	"modules-left": [
 		"custom/server",
+		"custom/glucose",
 		"cpu",
 		"memory",
 		"network#stats"
@@ -27,7 +28,7 @@
 	"memory": {
 		"tooltip": false,
 		"interval": 5,
-		"format": "{used}/{total} GiB"
+		"format": "{used:.1f}/{total:.1f} GiB",
 	},
 	"temperature": {
 		"tooltip": false
