@@ -1,4 +1,4 @@
--- This is an example Hyprland Lua config file.
+-- This is aattempts example Hyprland Lua config file.
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
 
@@ -60,6 +60,14 @@ end)
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "32")
+
+-- Hyprland 0.57 defaults this true; on older Intel it can strip alpha dmabuf
+-- formats and break kitty/EGL. See hyprwm/Hyprland discussions / omarchy#17061.
+hl.config({
+	quirks = {
+		skip_non_kms_dmabuf_formats = false,
+	},
+})
 
 -----------------------
 ----- PERMISSIONS -----
