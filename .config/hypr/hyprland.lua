@@ -43,6 +43,7 @@ local menu = "hyprlauncher"
 hl.on("hyprland.start", function()
 	hl.exec_cmd("[workspace 1 silent]" .. terminal)
 	hl.exec_cmd("[workspace 2 silent]" .. browser)
+	hl.exec_cmd("[workspace 5 silent]" .. "grok-bot")
 	hl.exec_cmd("[workspace 8 silent]" .. terminal .. " neomutt")
 	hl.exec_cmd("[workspace 9 silent]" .. browser .. " -P calendar https://calendar.google.com/calendar/r/week")
 	hl.exec_cmd("[workspace 10 silent]" .. "whatsie")
