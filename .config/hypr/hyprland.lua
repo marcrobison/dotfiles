@@ -28,7 +28,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "kitty"
 local browser = "firefox"
-local fileManager = "kitty yazi"
+local fileManager = terminal .. " yazi"
 local menu = "hyprlauncher"
 
 -------------------
@@ -42,9 +42,9 @@ local menu = "hyprlauncher"
 --
 hl.on("hyprland.start", function()
 	hl.exec_cmd("[workspace 1 silent]" .. terminal)
-	hl.exec_cmd("[workspace 8 silent]" .. terminal .. " neomutt")
-	hl.exec_cmd("[workspace 9 silent]" .. terminal .. " taskwarrior-tui")
 	hl.exec_cmd("[workspace 2 silent]" .. browser)
+	hl.exec_cmd("[workspace 8 silent]" .. terminal .. " neomutt")
+	hl.exec_cmd("[workspace 9 silent]" .. browser .. " -P calendar https://calendar.google.com/calendar/r/week")
 	hl.exec_cmd("[workspace 10 silent]" .. "whatsie")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("waybar & hyprpaper")
