@@ -38,6 +38,7 @@
 !/.local/share/rick.mp3
 
 !/.local/share/bin/
+.local/share/bin/creds.py
 
 .local/share/bin/__pycache__/
 !/.local/share/icons/
