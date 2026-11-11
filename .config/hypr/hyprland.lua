@@ -368,6 +368,7 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. "+ SHIFT + F", hl.dsp.exec_cmd("woomer"))
 hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd("screenshot"))
 hl.bind(mainMod .. "+ S", hl.dsp.exec_cmd("grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')"))
+hl.bind(mainMod .. "+ P", hl.dsp.exec_cmd(terminal .. " ~/.local/share/bin/pdf_selector.sh"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
