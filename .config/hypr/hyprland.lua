@@ -368,7 +368,6 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. "+ SHIFT + F", hl.dsp.exec_cmd("woomer"))
 hl.bind(mainMod .. "+ SHIFT + P", hl.dsp.exec_cmd("screenshot"))
 hl.bind(mainMod .. "+ P", hl.dsp.exec_cmd("grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')"))
-hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("cd /home/marcman/dev/c/snake_server && make client"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
