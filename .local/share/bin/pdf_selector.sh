@@ -3,12 +3,8 @@
 file=$(find "$HOME" -type f -iname "*.pdf"|
     fzf \
       --prompt="PDF ❯ " \
-      --height=100% \
       --layout=reverse \
-      --border=rounded \
-      --info=inline \
-      --preview='~/.local/share/bin/pdf-preview.sh {}' \
-      --preview-window='right:50%:wrap'
+      -i \
 )
 
 if [[ -n "$file" ]]; then
