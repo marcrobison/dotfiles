@@ -216,6 +216,14 @@ hl.config({
 	},
 })
 
+hl.config({
+	render = {
+		-- Don't flip DP-1 into HDR mode when a fullscreen app (Electron/Chromium) asks for it;
+		-- that modeset caused a black flash + wide color gamut error on Super+F.
+		cm_auto_hdr = 0,
+	},
+})
+
 ---------------
 ---- INPUT ----
 ---------------
