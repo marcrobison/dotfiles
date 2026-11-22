@@ -352,7 +352,14 @@ hl.bind(
 	hl.dsp.exec_cmd("hass-cli service call light.toggle --arguments entity_id=light.let_there_be_light")
 )
 hl.bind(mainMod .. " + CONTROL + A", hl.dsp.exec_cmd("hass-cli service call light.toggle --arguments entity_id=all"))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(terminal .. " bluetui"))
+hl.bind(
+	mainMod .. " + SHIFT + B",
+	hl.dsp.exec_cmd(terminal .. " bluetui", {
+		float = true,
+		size = { "monitor_w/2", "monitor_h/2" },
+		center = true,
+	})
+)
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(terminal .. " neomutt"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("mpv av://v4l2:/dev/video0 --profile=low-latency --untimed"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("if pgrep -x waybar > /dev/null; then pkill waybar; fi; waybar &"))
