@@ -340,7 +340,14 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"
 
 hl.bind(
 	mainMod .. " + I",
-	hl.dsp.exec_cmd([[kitty bash -c "pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo pacman -S"]])
+	hl.dsp.exec_cmd(
+		[[kitty bash -c "pacman -Slq | fzf --multi --preview 'pacman -Si {}' | xargs -ro sudo pacman -S"]],
+		{
+			float = true,
+			size = { "monitor_w/2", "monitor_h/2" },
+			center = true,
+		}
+	)
 )
 
 hl.bind(
