@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-file=$(find "$HOME" -type f -iname "*.pdf"|
+
+file=$(find "$HOME" \(\
+	-path "$HOME/.*" \
+	\) -prune -o -type f  -iname "*.pdf" -printf "%P\n"|
     fzf \
       --prompt="PDF ❯ " \
       --layout=reverse \
