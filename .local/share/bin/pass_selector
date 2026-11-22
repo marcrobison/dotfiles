@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+PASS_DIR=$HOME/.password-store/
+password=$(find "$PASS_DIR" -iname "*.gpg" -printf "%P\n" | sed "s/\.gpg//"|
+    fzf \
+      --prompt="PASS ❯ " \
+      --layout=reverse \
+      -i \
+)
+notify-send -t 1500 "Copied '$password' to the clipboard"
+
+if [[ -n "$password" ]]; then
+	pass -c "$password"
+fi
+

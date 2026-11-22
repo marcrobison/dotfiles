@@ -377,6 +377,15 @@ hl.bind(
 		center = true,
 	})
 )
+hl.bind(
+	mainMod .. "+ SHIFT + P",
+	hl.dsp.exec_cmd(terminal .. " ~/.local/share/bin/pass_selector", {
+
+		float = true,
+		size = { "monitor_w/2", "monitor_h/2" },
+		center = true,
+	})
+)
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
