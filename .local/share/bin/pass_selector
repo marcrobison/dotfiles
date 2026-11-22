@@ -7,9 +7,9 @@ password=$(find "$PASS_DIR" -iname "*.gpg" -printf "%P\n" | sed "s/\.gpg//"|
       --layout=reverse \
       -i \
 )
-notify-send -t 1500 "Copied '$password' to the clipboard"
 
 if [[ -n "$password" ]]; then
 	pass -c "$password"
+	notify-send -t 1500 "Copied ${password} to the clipboard"
 fi
 
