@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Quartus II 13.1
+Comment=Altera Quartus II 13.1 Web Edition
+Exec=/home/marcman/altera/13.1/quartus/bin/quartus --64bit %f
+Icon=/home/marcman/altera/13.1/quartus/adm/quartusii.png
+Terminal=false
+Categories=Development;Electronics;
+MimeType=application/x-qpf;
+StartupWMClass=Quartus

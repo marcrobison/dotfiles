@@ -37,6 +37,10 @@
 !/.local/share/notification.mp3
 !/.local/share/rick.mp3
 
+!/.local/share/applications/
+/.local/share/applications/*
+!/.local/share/applications/quartus.desktop
+
 !/.local/share/bin/
 .local/share/bin/creds.py
 

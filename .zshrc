@@ -102,4 +102,4 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS=(${ZSH_AUTOSUGGEST_IGNORE_WIDGETS:#yank})
 bindkey -M viins '^Y' autosuggest-accept
 
-export QSYS_ROOTDIR="/home/marcman/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/25.1/quartus/sopc_builder/bin"
+export QSYS_ROOTDIR="/home/marcman/altera/13.1/quartus/sopc_builder/bin"
